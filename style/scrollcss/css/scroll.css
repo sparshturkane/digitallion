@@ -192,9 +192,9 @@ h1.badge.velocity:after {
 .imgClass
 {border-radius: 50%;
 	width: 130px;
- 	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.80);
+ 	/* -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.80);
     -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.80);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.80);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.80); */
 }
 .spacer.s1 {
 	min-height: 200px;
