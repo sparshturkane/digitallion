@@ -1,0 +1,408 @@
+/*
+	Containers
+*/
+body, html {
+	height: 100%
+
+}
+#content-wrapper, #example-wrapper {
+	height: 100%;
+}
+.scrollContainer {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%
+}
+
+.scrollContainer {
+	height: 100%;
+	margin: auto;
+}
+#example-wrapper .scrollContent {
+	height: 100%;
+}
+
+.horizontal.scrollContainer {
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+#example-wrapper.scrollContainer .scrollContent {
+	width: 100%;
+	height: auto;
+}
+#example-wrapper.scrollContainer.horizontal .scrollContent {
+	width: auto;
+	height: 100%;
+}
+#example-wrapper.horizontal {
+	white-space: nowrap;
+	font-size: 0;  /* fix for spaces between inline block divs */
+}
+#example-wrapper.horizontal div {
+	font-size: 13px;
+}
+#example-wrapper .scrollContent, #example-wrapper.horizontal .scrollContent {
+	font-size: 0;
+}
+#example-wrapper .scrollContent div {
+	font-size: 13px;
+}
+#example-wrapper section {
+}
+
+section#titlechart {
+	text-align: center;
+	position: relative;
+	height: 100%;
+	min-height: 500px;
+	min-width: 100%;
+	height: 100vh;
+}
+.horizontal section, .horizontal section#titlechart{
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+section#titlechart #description {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: -150px auto auto -300px;
+}
+section#titlechart.home #description {
+	padding-top: 0;
+	padding-bottom: 100px;
+}
+section#titlechart #description h1 {
+	margin: 0;
+}
+section#titlechart #description h2 {
+	margin-bottom: 20px;
+}
+section#titlechart #description a.viewsource {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+section#titlechart #description code {
+	background-color: #E1F1FF;
+	padding-left: 2px;
+	padding-right: 2px;
+	white-space: nowrap;
+}
+
+section#titlechart #description ol, section#titlechart #description p {
+	text-align: left;
+	max-width: 400px;
+	margin: 10px auto 10px auto;
+	white-space: normal;
+}
+section#titlechart #description ol {
+	list-style-position: outside;
+}
+#example-wrapper section#titlechart #description:after {
+	content: "↧";
+	font-size: 40px;
+	display: block;
+}
+#example-wrapper.horizontal section#titlechart #description:after {
+	content: "↦";
+}
+
+
+section.demo * {
+	font-size: 13px;
+}
+section.demo {
+	font-size: 0;
+	text-align: center;
+	
+}
+section.demo.fullheight {
+	min-height: 100%;
+}
+section.demo.doublewidth, .spacer.doublewidth {
+	min-width: 200%;
+}
+.horizontal section.demo {
+	text-align: inherit;
+	white-space: nowrap;
+	
+}
+.horizontal section.demo.fullwidth {
+	min-width: 100%;
+}
+/*
+	Elements
+*/
+h1.badge {
+	/*cursor: text;*/
+	pointer-events: none;
+}
+h1.badge:after {
+	vertical-align: text-top;
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+	margin-left: 10px;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding: 2px 5px;
+	border-radius: 10px;
+	pointer-events: all;
+}
+h1.badge.gsap:after {
+	content: "GSAP";
+	background-color: #61AC27;
+}
+h1.badge.velocity:after {
+	content: "Velocity.js";
+	background-color: #f53a47;
+}
+.spacer {
+	text-align: center;
+	min-height: 100px;
+	background-image: url("../img/example_bg_spacer_v.gif");
+}
+.spacer.s0 {
+	min-height: 1px;
+}
+.spacer.s1 {
+	min-height: 100px;
+	background-color: grey;
+}
+.spacer.s_viewport {
+	min-height: 100%;
+	background-color: black;
+}
+.horizontal .spacer {
+	background-image: url("../img/example_bg_spacer_h.gif");
+	margin-bottom: 0;
+	min-height: initial;
+	min-width: 100px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.horizontal .spacer.s0 {
+	min-width: 1px;
+}
+.horizontal .spacer.s1 {
+	min-width: 100px;
+}
+
+.spacer.s_viewport {
+	min-width: 100%;
+}
+
+/*.box1{
+	display: inline-block;
+	position: relative;
+	border-radius: 8px;
+	border: 0px solid white;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+.box1 {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+
+}*/
+
+.imgClass
+{border-radius: 50%;
+width: 100px;}
+
+
+
+/*
+	colors
+*/
+
+.black {
+	background-color: #000000;
+}
+
+/*
+	Form
+*/
+
+
+/*
+	MENU
+*/
+
+
+/*
+	mobile
+*/
+/*html.touch .menuwrap {
+	z-index: 999999;
+	box-sizing: content-box;
+	min-width: 0;
+	width: 100%;
+	margin: 0;
+	left: 0;
+	top: 0;
+	height: auto;
+	background-color: transparent;
+}
+html.touch ul#menu {
+	position: static;
+	margin: 100px 0 0 0;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	display: none;
+}
+html.touch .menuwrap.open {
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	overflow: scroll;
+}
+html.touch .menuwrap.open ul#menu {
+	display: block;
+}
+
+html.touch ul#menu > li {
+	display: block;
+	margin: 10px;
+	height: auto;
+}
+html.touch ul#menu ul {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px dashed white;
+}
+html.touch ul#menu li {
+	padding: 10px 0;
+}
+html.touch ul#menu li ul li{
+}
+html.touch ul#menu > li a {
+	color: #2e639e;
+	font-size: 4em;
+	line-height: 1.2em;
+}
+html.touch ul#menu ul li a {
+	font-size: 2.5em;
+	line-height: 1.2em;
+}
+html.touch ul#menu ul li a {
+}
+html.touch ul#menu ul {
+	display: block;
+}
+html.touch ul#menu ul li.current a {
+	background-color: transparent;
+}
+html.touch ul#menu ul li a:hover {
+	background-color: transparent;
+}
+html.touch ul#menu ul li a:active {
+	color: white;
+}
+html.touch .menuwrap > a.prev, html.touch .menuwrap > a.next, html.touch .menubtn {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	top: 10px;
+	background-color: #3883d8;
+	color: white;
+	font-size: 4em;
+	line-height: 1.5em;
+}
+html.touch .menuwrap > a.prev:active, html.touch .menuwrap > a.next:active, html.touch .menubtn:active {
+	background-color: white;
+	color: #3883d8;
+	border: 2px solid #3883d8;
+}
+html.touch .menuwrap > a.prev {
+	margin-right: 70px;
+	padding-right: 10px; 
+}
+html.touch .menuwrap > a.next {
+	margin-left: 70px;
+	padding-left: 10px;
+}
+html.touch .menubtn {
+	padding: 0;
+	border: 0;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	line-height: 0;
+	outline: none;
+
+	appearance: none;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+html.touch .menubtn:active .button-lines, html.touch .menubtn:active .button-lines::before, html.touch .menubtn:active .button-lines::after{
+	background: #3883d8;
+}
+html.touch .menubtn .button-lines, html.touch .menubtn .button-lines::before, html.touch .menubtn .button-lines::after {
+	display: inline-block;
+	height: 6px;
+	width: 35px;
+	border-radius: 4px;
+	transition: 0.3s;
+	background: #FFFFFF;
+	position: relative;
+	left: 0;
+	top: -5px;
+}
+html.touch .menubtn .button-lines::before, html.touch .menubtn .button-lines::after {
+	content: '';
+	position: absolute;
+}
+html.touch .menubtn .button-lines::before {
+	top: 12px;
+}
+html.touch .menubtn .button-lines::after {
+	top: -12px;
+}
+html.touch .menuwrap.open .menubtn .button-lines {
+	background: transparent;
+}
+html.touch .menuwrap.open .menubtn .button-lines::before {
+	top: 0px;
+	-o-transform: rotate3d(0, 0, 1, -45deg);
+	-moz-transform: rotate3d(0, 0, 1, -45deg);
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transform: rotate3d(0, 0, 1, -45deg);
+	-o-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+html.touch .menuwrap.open .menubtn .button-lines::after {
+	top: 0px;
+	-o-transform: rotate3d(0, 0, 1, 45deg);
+	-moz-transform: rotate3d(0, 0, 1, 45deg);
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transform: rotate3d(0, 0, 1, 45deg);
+	-o-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+
+*/
+

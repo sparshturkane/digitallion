@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="A collection of animating css-only hamburger menu toggle switches that transform when clicked represnting an active (or menu open) state.">
+  <title>CSS-Only Hamburger Menu Icons Demo</title> -->
+  <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+
+
+  <div class="o-caontainer">
+    
+    <div class="o-agrid">
+     
+      <div class="o-griad__item">
+        <button class="c-hamburger c-hamburger--htx">
+          <span>toggle menu</span>
+        </button>
+      </div>
+      
+
+   </div>
+  </div>
+
+
+
+<script>
+  (function() {
+
+    "use strict";
+
+    var toggles = document.querySelectorAll(".c-hamburger");
+
+    for (var i = toggles.length - 1; i >= 0; i--) {
+      var toggle = toggles[i];
+      toggleHandler(toggle);
+    };
+
+    function toggleHandler(toggle) {
+      toggle.addEventListener( "click", function(e) {
+        e.preventDefault();
+        (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+      });
+    }
+
+  })();
+</script>
+
+<!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE -->
+<script src="js/dist/githubIcons.js"></script>
+<script src="js/dist/carbonAd.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-34160351-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- /EXTERNAL SCRIPTS -->
+
+</body>
+</html>
